@@ -1,0 +1,145 @@
+* {
+    /* box-sizing: border-box; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #F1FF76;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #F1FF76;
+    text-decoration: none;
+}
+
+h1, h5 {
+    color: #F1FF76;
+    background: #000;
+    padding: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+#navbar a:hover, #connect a:hover {
+    text-decoration: underline;
+}
+
+#navbar {
+    padding: 20px;
+    background: #111;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("luca-bravo-217276-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#projects h2, #connect h2 {
+    margin-top: 70px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #444;
+    min-height: 100vh;
+    width: 100%;
+    overflow: auto;
+}
+
+#connect {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    min-height: 40vh;
+    width: 100%;
+    align-items: center;
+}
+
+.project-tile {
+    min-width: 254px;
+    min-height: 254px;
+    border: 5px solid #F1FF76;
+    text-align: center;
+    margin: 20px auto;
+    background: #ddd;
+}
+
+.project-tile img, .project-tile p {
+    opacity: .5;
+    transition: opacity .2s;
+}
+
+.project-tile img:hover, .project-tile img:hover + p {
+    opacity: 1;
+}
+
+.project-tile p {
+    background: #111;
+    padding: 5px;
+    margin-top: -4px;
+}
+
+.connections {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.fab {
+    font-size: 4em;
+    margin: 7px 30px;
+}
+
+.profile {
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media(min-width: 992px) {
+    #projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 50vh
+    }
+
+    #projects>h2 {
+        flex: 0 1 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+}
+
